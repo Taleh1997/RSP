@@ -1,35 +1,46 @@
-main{
-    border: 5px solid black;
+main {
     width: 100%;
     height: 700px;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
+    border-radius: 30px;
 }
 
-.div-user,.div-comp{
+.h1 {
+    background-color: aquamarine;
+    border: 5px double green;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px green;
+}
+
+.div-user,
+.div-comp {
     margin: 20px 0;
-    width: 27%;
-    height: 47%;
-    background-color: antiquewhite;
+    width: 30%;
+    height: 55%;
+    background-color: rgb(203, 145, 68);
+    box-shadow: 0 0 10px rgb(227, 148, 45);
     display: inline-block;
     padding: 20px;
     padding-top: 50px;
     box-sizing: border-box;
+    border-radius: 100px;
 }
 
-.div-comp{
+.div-comp {
     margin-left: 100px;
 }
 
-.imgs{
+.imgs {
     width: 120px;
     height: 120px;
     margin: 0 10px;
     cursor: pointer;
 }
 
-.img-choose{
+.img-choose {
     width: 120px;
     height: 120px;
     margin: 0 10px;
