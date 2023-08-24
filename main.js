@@ -1,5 +1,5 @@
 const userName = prompt("What is your name?")
-let winnerScore = +prompt("nece score olsun?")
+let winnerScore = +prompt("Which score do you win?")
 userH2.innerHTML = userName
 
 let letterArr = ["r", "s", "p"]
@@ -18,8 +18,10 @@ imgPaper.addEventListener("click", () => play("p"));
 imgRock.addEventListener("click", () => play("r"))
 
 function gameStart(user, computer) {
-    if (winnerScore === userPoints || winnerScore === compPoints) {
-        return alert(`Game Finished!`)
+    if (userPoints === winnerScore) {
+        return alert("Game finished. Congratulations, You win!")
+    } else if (compPoints === winnerScore) {
+        return alert("Game finished. Unfortunately, You lose computer win!")
     }
     if (user === computer) {
 

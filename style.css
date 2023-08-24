@@ -3,12 +3,13 @@ main {
     height: 700px;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
-    border-radius: 30px;
+    /* margin-top: 10px; */
 }
 
 .h1 {
     background-color: aquamarine;
+    width: 70%;
+    margin: 0 auto;
     border: 5px double green;
     border-radius: 20px;
     padding: 10px 0;
@@ -19,9 +20,10 @@ main {
 .div-comp {
     margin: 20px 0;
     width: 30%;
-    height: 55%;
-    background-color: rgb(203, 145, 68);
-    box-shadow: 0 0 10px rgb(227, 148, 45);
+    height: 60%;
+    border: 3px double black;
+    /* background-color: rgb(203, 145, 68); */
+    box-shadow: 0 0 10px rgb(49, 47, 44);
     display: inline-block;
     padding: 20px;
     padding-top: 50px;
@@ -30,7 +32,7 @@ main {
 }
 
 .div-comp {
-    margin-left: 100px;
+    /* margin-left: 50px; */
 }
 
 .imgs {
@@ -40,8 +42,35 @@ main {
     cursor: pointer;
 }
 
+.img1:hover {
+    background-color: red;
+    border-radius: 50px;
+}
+
+.img2 {
+    width: 105px;
+}
+
+.img3 {
+    width: 105px;
+}
+
+.img2:hover {
+    background-color: red;
+    border-radius: 50px;
+}
+
+.img3:hover {
+    background-color: red;
+    border-radius: 50px;
+}
+
 .img-choose {
     width: 120px;
     height: 120px;
     margin: 0 10px;
+}
+
+.img-gif{
+    width: 300px;
 }
