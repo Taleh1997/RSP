@@ -1,5 +1,6 @@
-// const userName = prompt("What is your name?")
-// userH2.innerHTML = userName
+const userName = prompt("What is your name?")
+let winnerScore = +prompt("nece score olsun?")
+userH2.innerHTML = userName
 
 let letterArr = ["r", "s", "p"]
 
@@ -11,7 +12,15 @@ const randomCompAttack = (arr) => {
     return letterArr[compRandomNum]
 };
 
+
+imgScissors.addEventListener("click", () => play("s"));
+imgPaper.addEventListener("click", () => play("p"));
+imgRock.addEventListener("click", () => play("r"))
+
 function gameStart(user, computer) {
+    if (winnerScore === userPoints || winnerScore === compPoints) {
+        return alert(`Game Finished!`)
+    }
     if (user === computer) {
 
         userPoint.innerHTML = `Point: ${userPoints}`;
@@ -47,7 +56,6 @@ function gameStart(user, computer) {
         compImg.src = `./img/${computer}-img.png`
 
     } else {
-        console.log("Computer Win!");
         compPoints++
         userPoint.innerHTML = `Point: ${userPoints}`;
         compPoint.innerHTML = `Point : ${compPoints}`;
@@ -59,33 +67,34 @@ function gameStart(user, computer) {
 
         h3User.innerHTML = "Lose!";
         h3Comp.innerHTML = "Win!";
-        
+
         userImg.src = `./img/${user}-img.png`;
         compImg.src = `./img/${computer}-img.png`
     }
 };
 
-function play(userChoose) {
-    const computer = randomCompAttack(letterArr);
-    const result = gameStart(userChoose, computer);
-};
 
 const playGame = (event) => {
     realPlayerAttack = event.key
     computer = randomCompAttack(letterArr)
 
-    if (letterArr.indexOf(realPlayerAttack)!==-1) {
+    if (event.key == "r" || event.key == "s" || event.key == "p") {
         gameStart(realPlayerAttack, computer)
     } else {
         alert("Please, just press one of the 'R S P' button")
     }
 };
 
-imgRock.addEventListener("click", () => play("r"));
-imgPaper.addEventListener("click", () => play("p"));
-imgScissors.addEventListener("click", () => play("s"));
+function play(userChoose) {
+    let computer = randomCompAttack(letterArr);
+    gameStart(userChoose, computer);
+};
 
 window.onkeydown = playGame
+
+
+
+
 
 
 
